@@ -1,11 +1,12 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
-from pymongo import MongoClient
+from pymongo import MongoCliento
 from urllib.parse import urlparse, parse_qs
 from bson import json_util
 
 # Connect to MongoDB
-mongo_client = MongoClient("mongodb://localhost:27017")
+mongo_client = MongoClient("mongdb://mongodb:27017")
+
 db = mongo_client['mydb']
 collection = db['items']
 
